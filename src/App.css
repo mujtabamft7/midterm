@@ -1,38 +1,178 @@
+html, body {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: Monaco, Monaco;
+  background-image: url('lotto.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  font-size: 20px;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.right-panel {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.right-panel h3 {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #FFD700; 
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.number-selection {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.number-button {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #FFD700; 
+  color: black;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.number-button:hover {
+  background-color: #FFA500; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.number-button.selected {
+  border-color: #ff0000; 
+  border-radius: 15px;
 }
+
+.money-buttons {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.money-button {
+  width: 70px;
+  height: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #FFD700; 
+  color: black;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.money-button:hover {
+  background-color: #FFA500; 
+}
+
+.selected-numbers {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.selected-numbers h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333333;
+}
+
+.selected-numbers ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.selected-numbers li {
+  margin-bottom: 0;
+  color: #FF4500; 
+}
+
+.selected-numbers h3:last-child {
+  margin-top: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.action-button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #FFD700; 
+  color: black;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #FFA500; 
+}
+
+.saved-tickets {
+  border: 2px solid #000000; 
+  background-color: #ffffff;
+  border-radius: 10px;
+  list-style-type: none;
+  padding: 10px;
+}
+
+.saved-tickets li {
+  margin-bottom: 10px;
+  background-color: #FFD700; 
+  padding: 5px;
+  border-radius: 4px;
+  color: black;
+}
+
+
